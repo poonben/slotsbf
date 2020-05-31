@@ -1,7 +1,7 @@
 from os import getenv
-from .waits.short_wait import short_wait
-from .waits.med_wait import med_wait
-from .mailer import send_error_email
+from waits.short_wait import short_wait
+from waits.med_wait import med_wait
+from mailer import send_error_email
 from tweepy import Cursor, TweepError, API, OAuthHandler
 
 
