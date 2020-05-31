@@ -1,7 +1,7 @@
 from os import getenv
 from random import shuffle, choice
-from waits import short_wait, med_wait
-from mailer.send_error_email import send_error_email
+from .waits import short_wait, med_wait
+from .mailer.send_error_email import send_error_email
 from tweepy import Cursor, TweepError, OAuthHandler, API
 
 
