@@ -1,7 +1,7 @@
 from os import getenv
 from random import shuffle, choice
-from .waits import short_wait, med_wait
-from .mailer.send_error_email import send_error_email
+from waits import short_wait, med_wait
+from mailer.send_error_email import send_error_email
 from tweepy import Cursor, TweepError, OAuthHandler, API
 
 
@@ -39,15 +39,16 @@ def retweet_hashtags(hashtag_list):
         try:
             tweets = Cursor(api.search, ht).items(tweetNumber)
             for tweet in tweets:
-                try:
-                    tweet.retweet()
-                    print("-> Retweet Done!")
-                    short_wait.short_wait()
-                except TweepError as error:
-                    print(error.reason)
-                    send_error_email(error)
-                    pass
-                med_wait.med_wait()
+                if tweet.user.screen_name != 'realDonaldTrump':
+                    try:
+                        tweet.retweet()
+                        print("-> Retweet Done!")
+                        short_wait.short_wait()
+                    except TweepError as error:
+                        print(error.reason)
+                        send_error_email(error)
+                        pass
+                    med_wait.med_wait()
         except TweepError as error:
             print(f"-> ERROR: {error.reason}")
             send_error_email(error)
@@ -56,4 +57,36 @@ def retweet_hashtags(hashtag_list):
 
 # ---------------------------------------------------------------------------- #
 if __name__ == "__main__":
-    retweet_hashtags()
+    hashtags = [
+        '#dc',
+        '#sanfrancisco',
+        '#la',
+        '#ny',
+        '#webdevelopment', 
+        '#skateboarding',
+        '#WashingtonDC',
+        '#sanfrancisco',
+        '#losangeles',
+        '#dmvmusic', 
+        '#coding', 
+        '#100daysofcode',
+        '#dcrestaurant',
+        '#sfrestaurant',
+        '#larestaurant',
+        '#nyrestaurant',
+        '#gamedev',
+        '#dcevents',
+        '#sfevents',
+        '#laevents',
+        '#nyevents',
+        '#dcnightlife',
+        '#lanightlife',
+        '#sfnightlife',
+        '#nynightlife',
+        '#ufc',
+        '#gamingnews',
+        '#newmusic',
+        '#ustreetdc',
+        '#techjobs',
+    ]
+    retweet_hashtags(hashtags)
