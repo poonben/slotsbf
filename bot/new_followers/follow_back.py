@@ -24,25 +24,23 @@ api = API(auth, wait_on_rate_limit=True)
 
 # ---------------------------------------------------------------------------- #
 def follow_back(followers, people_i_follow):
-        for person in followers:
-            if person not in people_i_follow:
-                try:
-                    api.create_friendship(person)
-                    user = api.get_user(person)
-                    print(f"-> Just followed @{user.screen_name}!")
-                    med_wait.med_wait()
-                except TweepError as error:
-                    print(f"-> Error: {error.reason}")
-                    send_error_email.send_error_email(error)
-                    pass
-            elif person in people_i_follow:
-                try:
-                    user = api.get_user(person)
-                    print(f"-> You already follow @{user.screen_name}.")
-                except TweepError as error:
-                    print(f"-> Error: {error.reason}")
-                    send_error_email.send_error_email(error)
-                    pass
+    count = 5
+    for person in followers:
+        if person not in people_i_follow:
+            try:
+                api.create_friendship(person)
+                user = api.get_user(person)
+                print(f"-> Just followed @{user.screen_name}!")
+                count -= 1
+                if count == 0:
+                    "Done following for now."
+                    return
+                med_wait.med_wait()
+            except TweepError as error:
+                print(f"-> Error: {error.reason}")
+                send_error_email.send_error_email(error)
+                pass
+        short_wait.short_wait()
 
 
 # ---------------------------------------------------------------------------- #

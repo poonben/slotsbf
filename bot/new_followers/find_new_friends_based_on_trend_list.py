@@ -51,7 +51,7 @@ def find_new_friends_based_on_trend_list(trend_list):
             print(f"-> Error: {error.reason}")
             send_error_email(error)
             pass 
-        short_wait()
+        med_wait()
 
 
 # ---------------------------------------------------------------------------- #

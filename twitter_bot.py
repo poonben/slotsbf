@@ -276,7 +276,7 @@ class TwitterBot:
 if __name__ == "__main__":
     url = 'http://joshbot9000.herokuapp.com/'
     while True:
-        print("ººººº Twitter Bot Started! ººººº")
+        """ print("ººººº Twitter Bot Started! ººººº")
         print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
         sleep(2)
         print('┬─┬ノ( º _ ºノ)')
@@ -293,7 +293,7 @@ if __name__ == "__main__":
         print('(┛ಠ_ಠ)┛彡┻━┻')
         print("////-------Medium Rest Period-------////")
         get(url)
-        med_wait.med_wait()
+        med_wait.med_wait() """
         TwitterBot.follow_back()
         TwitterBot.post_status()
         print('┳━┳ ヽ(ಠل͜ಠ)ﾉ')
