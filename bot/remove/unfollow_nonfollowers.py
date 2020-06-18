@@ -3,6 +3,7 @@ from .waits.short_wait import short_wait
 from .waits.med_wait import med_wait
 from .mailer import send_error_email
 from tweepy import Cursor, TweepError, API, OAuthHandler
+from random import choice
 
 
 # ---------------------------------------------------------------------------- #
@@ -24,7 +25,7 @@ api = API(auth, wait_on_rate_limit=True)
 
 # ---------------------------------------------------------------------------- #
 def unfollow_nonfollowers(followers, people_i_follow):
-    count = 5
+    count = choice(range(1, 16))
     for person in people_i_follow:
         if person not in followers:
             try:
