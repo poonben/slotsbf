@@ -286,7 +286,7 @@ if __name__ == "__main__":
         TwitterBot.refresh_db()
         TwitterBot.post_status()
         print('┬─┬ノ( ಠ ل͜ಠノ)')
-        print("////-------Med Rest Period-------////")
+        print("////-------Medium Rest Period-------////")
         get(url)
         med_wait.med_wait()
         TwitterBot.retweet_my_hashtags()

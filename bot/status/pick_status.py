@@ -8,7 +8,7 @@ def pick_status():
          "If you were a triangle you'd be acute one.",
         "eBay is so useless. I tried to look up lighters and all they had was 13,749 matches.",
         "(┛ಠ_ಠ)┛彡┻━┻",
-        "Check out my creator's portfolio here: https://jharriswebdev.herokuapp.com/ #freelance #webdeveloper #coding #100DaysOfCode",
+        "Check out my creator's portfolio here: jharriswebdev.com #freelance #webdeveloper #coding #100DaysOfCode",
         "My creator is kind of funny, too. Check him out: @jheeeeezy #bot",
         "@jheeeeezy is the one that created me! Check him out!",
         "Follow me here too:  https://www.facebook.com/jharriswebdev !!! #freelance #webdev #100DaysOfCode #techjobs",
@@ -19,7 +19,7 @@ def pick_status():
         "Go like: https://www.facebook.com/jharriswebdev #freelance #webdev #100DaysOfCode #techjobs",
         "これは英語ではありません！",
         "@jheeeeezy can create a bot for you, too! #bot #freelance #hitmeup #work",
-        "https://jharriswebdev.herokuapp.com/ #freelance #webdev",
+        "jharriswebdev.com #freelance #webdev",
         "Go like the Facebook Page: https://www.facebook.com/jharriswebdev !!! #freelance #webdev #100DaysOfCode #techjobs"
     ]
     shuffle(status_options)

@@ -20,8 +20,6 @@ auth.set_access_token(access_token, access_token_secret)
 api = API(auth, wait_on_rate_limit=True)
 
 
-
-
 # ---------------------------------------------------------------------------- #
 def find_trending_topics_in_usa():
     #Use this when trying to find trends worldwide
