@@ -1,5 +1,3 @@
-# Josh Bot 2.0 Under Development: https://github.com/jharris711/josh-bot-2.0
-
 # josh_bot_9000
 An automated Twitter bot, created with Python 3 and Tweepy. Hosted on Heroku, running 24/7. Auto reply, like and favorite when mentioned. Auto-retweet specified hashtags. Posts status updates. Follows the users that follow the bot. Unfollows those not found in followers list. Deletes old tweets. Finds trends in USA and follows trendy users. Errors sent to gmail through smtp. Messages coming soon.
 
