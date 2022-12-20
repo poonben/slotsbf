@@ -1,4 +1,7 @@
 # josh_bot_9000
+
+## Bot no longer works due to new Twitter policies. Thanks, Elon! 🙄👎
+
 An automated Twitter bot, created with Python 3 and Tweepy. Hosted on Heroku, running 24/7. Auto reply, like and favorite when mentioned. Auto-retweet specified hashtags. Posts status updates. Follows the users that follow the bot. Unfollows those not found in followers list. Deletes old tweets. Finds trends in USA and follows trendy users. Errors sent to gmail through smtp. Messages coming soon.
 
 To host your own on Heroku:
